@@ -1,4 +1,4 @@
-package title;
+package basePackage;
 
 public enum Setting {
 	OFF("---"),
