@@ -1,3 +1,4 @@
+package basePackage;
 import java.util.ArrayList;
 
 /**
@@ -30,6 +31,18 @@ public class Stove {
 	 **** You must write the following method ****
 	 */
 	public void displayStove() {
+		boolean isHot = false;
+		
+		for (Burner burner : burners ) {
+			burner.display();
+			if (burner.getTemperature() == Burner.Temperature.BLAZING) {
+				isHot = true;
+			}
+		}
+		if (isHot) {
+			System.out.println("RED LIGHT - HOT BURNER ALERT");
+		}
+		System.out.println();
 
 	}
 	
